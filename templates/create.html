@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+Create post
+{% endblock %}
+
+{% block body %}
+<h1>This is where you can create your own post</h1>
+
+<form method="POST" class="form-control">
+    <input type="text" name="title" placeholder="Input the title" class="form-control"><br>
+    <input type="text" name="text" placeholder="Input the text" class="form-control"><br>
+    <input type="file" name="picture" placeholder="Input the picture" class="form-control"><br>
+    <input type="file" name="music" placeholder="Input the song" class="form-control"><br>
+    <button class="btn btn-success" type="submit">Submit</button>
+</form>
+{% endblock %}

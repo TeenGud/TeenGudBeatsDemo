@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img class="header__img" src="{{url_for('static', filename='img/pepa.jpg')}}" alt="law">
+            </a>
+          </div>
+
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="{{url_for('index')}}" class="nav-link px-2 link-secondary">Home</a></li>
+            <li><a href="{{url_for('create')}}" class="nav-link px-2">Create a post</a></li>
+            <li><a href="{{url_for('posts')}}" class="nav-link px-2">All posts</a></li>
+              <li><a href="{{url_for('about')}}" class="nav-link px-2">About me</a></li>
+          </ul>
+
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2">Login</button>
+            <button type="button" class="btn btn-primary">Sign-up</button>
+          </div>
+        </header>
+        <main class="content">{% block body %}{% endblock %}</main>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+             <img class="header__img" src="{{url_for('static', filename='img/pepe.jpg')}}" alt="law">
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Teen Gud, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/teen1gud8/" target="_blank"><img class="header__img2" src="{{url_for('static', filename='img/inst.png')}}" alt="law"><use xlink:href="https://www.instagram.com/teen1gud8/"></use></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://vk.com/teen1gud8" target="_blank"><img class="header__img2" src="{{url_for('static', filename='img/vk.png')}}" alt="law"><use xlink:href="https://vk.com/teen1gud8/"></use></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://t.me/+wkg3g2V915QzNDYy" target="_blank"><img class="header__img2" src="{{url_for('static', filename='img/tel.png')}}" alt="law"><use xlink:href="https://www.instagram.com/teen1gud8/"></use></a></li>
+
+        </ul>
+      </footer>
+    </div>
+</body>
+</html>
